@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet"  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+
     <title>Document</title>
+
     <style>
         *{
             margin: 0;
@@ -669,54 +673,15 @@
             display: flex;
         }
         
-        
-        .slide:nth-of-type(2){
-            background-color: darkblue;
-            left: 100%;
-        }
-        .slide:nth-of-type(3){
-            background-color: darkcyan;
-            left: 200%;
-        }
-        .control-visible{
-          position: absolute;
-          width: 100%;
-          bottom: 12px;
-          text-align: center;
-      }
+     
       
-      .control-visible label{
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          background-color: #fff;
-          border-radius: 50%;
-          margin: 0 3px;
-          border: 2px solid #fff;
-      }
-      .slides input[type="radio"]:nth-of-type(1):checked ~ .control-visible label:nth-of-type(1){
-          background-color: #333;
-      }
-      .slides input[type="radio"]:nth-of-type(2):checked ~ .control-visible label:nth-of-type(2){
-          background-color: #333;
-      }
-      .slides input[type="radio"]:nth-of-type(3):checked ~ .control-visible label:nth-of-type(3){
-          background-color: #333;
-      }
-      .slides input[type="radio"]:nth-of-type(1):checked ~ .slide{
-           transform: translateX(0%);
-       }
-       .slides input[type="radio"]:nth-of-type(2):checked ~ .slide{
-           transform: translateX(-100%);
-       }
-       .slides input[type="radio"]:nth-of-type(3):checked ~ .slide{
-           transform: translateX(-200%);
-       }
+    
        .slide  .n-photo{
             width: 50%;
             height: 100%;
             background-position: center;
             background-size: cover;
+            float: left;
 
 
         }
@@ -727,6 +692,7 @@
             padding: 50px;
             box-sizing: border-box;
             color: #00183c;
+            float: left;
         }
         
         .n-photoA{
@@ -773,7 +739,10 @@
             width: 160px;
             height: 160px;
         }
-       
+        
+        @media screen and (max-width:375px){
+          
+        }
 
 
         
@@ -1011,11 +980,56 @@
         <section id="nav-5" class="news">
             <h2 style="writing-mode: vertical-lr; font-weight: 900; border-top: 2px solid #803032;padding-top: 10px;color: #00183c; ">相關文章</h2>
             <div class="slides">
-                <input type="radio" id="control-1" name="control" checked>
-                <input type="radio" id="control-2" name="control">
-                <input type="radio" id="control-3" name="control">
+            
                 <div class="slide">
-                   <div class="n-photo n-photoA"></div>
+                   
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="n-photo n-photoA"></div>
+                        <div class="n-txt">
+                            <h3>咖啡迷思 #1</h3>
+                            <h4>咖啡豆 vs 咖啡粉</h4>
+                            <h5>有時閒坐在家，自己手沖一杯香噴噴的咖啡，絕對是一件賞心樂事。或許你都試過在買咖啡時遇到「人生交叉點」，買咖啡豆（whole coffee beans）還是磨好的咖啡粉（ground coffee beans）好呢？</h5>
+                            <h5>如果你有充足的咖啡沖調器具，時間上又許可的話，當然是買咖啡豆！只因咖啡的香氣來自被烘烤出的油脂，這些油脂被封存在咖啡豆內的小孔裡，最能完整保留咖啡風味與新鮮度。</h5>
+                            <div class="n-btn">
+                                <a href="">More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="n-photo n-photoA"></div>
+                        <div class="n-txt">
+                            <h3>咖啡迷思 #1</h3>
+                            <h4>咖啡豆 vs 咖啡粉</h4>
+                            <h5>有時閒坐在家，自己手沖一杯香噴噴的咖啡，絕對是一件賞心樂事。或許你都試過在買咖啡時遇到「人生交叉點」，買咖啡豆（whole coffee beans）還是磨好的咖啡粉（ground coffee beans）好呢？</h5>
+                            <h5>如果你有充足的咖啡沖調器具，時間上又許可的話，當然是買咖啡豆！只因咖啡的香氣來自被烘烤出的油脂，這些油脂被封存在咖啡豆內的小孔裡，最能完整保留咖啡風味與新鮮度。</h5>
+                            <div class="n-btn">
+                                <a href="">More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="n-photo n-photoA"></div>
+                        <div class="n-txt">
+                            <h3>咖啡迷思 #1</h3>
+                            <h4>咖啡豆 vs 咖啡粉</h4>
+                            <h5>有時閒坐在家，自己手沖一杯香噴噴的咖啡，絕對是一件賞心樂事。或許你都試過在買咖啡時遇到「人生交叉點」，買咖啡豆（whole coffee beans）還是磨好的咖啡粉（ground coffee beans）好呢？</h5>
+                            <h5>如果你有充足的咖啡沖調器具，時間上又許可的話，當然是買咖啡豆！只因咖啡的香氣來自被烘烤出的油脂，這些油脂被封存在咖啡豆內的小孔裡，最能完整保留咖啡風味與新鮮度。</h5>
+                            <div class="n-btn">
+                                <a href="">More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            
+                   
+                   
+                    <!-- <div class="n-photo n-photoA"></div>
                    <div class="n-txt">
                        <h3>咖啡迷思 #1</h3>
                        <h4>咖啡豆 vs 咖啡粉</h4>
@@ -1053,7 +1067,7 @@
                     <label for="control-2"></label>
                     <label for="control-3"></label>
                 </div>
-            </div>
+            </div> -->
         </section>
         
     </main>
@@ -1097,6 +1111,15 @@
         });
 
     </script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
 
 </body>
 </html>
